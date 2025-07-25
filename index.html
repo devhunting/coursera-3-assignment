@@ -4,18 +4,20 @@
   <meta charset="UTF-8">
   <title>Food, LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-default navbar-fixed-top" id="top">
+  <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
@@ -35,35 +37,41 @@
     </div>
   </nav>
 
-  <!-- Main Content -->
-  <div class="container">
+  <!-- Main Heading -->
+  <div class="container main-content">
     <h1 class="text-center">Our Menu</h1>
     <div class="row">
       <!-- Chicken -->
-      <div class="col-xs-12 col-sm-6 col-md-4 menu-box" id="chicken">
-        <h3>Chicken</h3>
-        <p>Juicy grilled chicken seasoned with herbs and spices. Perfectly cooked and served hot.</p>
-        <p class="visible-xs text-center"><a href="#top">Back To Top</a></p>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="menu-box" id="chicken">
+          <h3>Chicken</h3>
+          <p>Juicy grilled chicken seasoned with herbs and spices. Perfectly cooked and served hot.</p>
+          <p class="text-center visible-xs"><a href="#top">Back To Top</a></p>
+        </div>
       </div>
 
       <!-- Beef -->
-      <div class="col-xs-12 col-sm-6 col-md-4 menu-box" id="beef">
-        <h3>Beef</h3>
-        <p>Tender beef cuts slow-cooked in flavorful sauces. A savory delight for meat lovers.</p>
-        <p class="visible-xs text-center"><a href="#top">Back To Top</a></p>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="menu-box" id="beef">
+          <h3>Beef</h3>
+          <p>Tender beef cuts slow-cooked in flavorful sauces. A savory delight for meat lovers.</p>
+          <p class="text-center visible-xs"><a href="#top">Back To Top</a></p>
+        </div>
       </div>
 
       <!-- Sushi -->
-      <div class="col-xs-12 col-sm-12 col-md-4 menu-box" id="sushi">
-        <h3>Sushi</h3>
-        <p>Freshly rolled sushi with premium ingredients. Experience the taste of authentic Japan.</p>
-        <p class="visible-xs text-center"><a href="#top">Back To Top</a></p>
+      <div class="col-xs-12 col-sm-12 col-md-4">
+        <div class="menu-box" id="sushi">
+          <h3>Sushi</h3>
+          <p>Freshly rolled sushi with premium ingredients. Experience the taste of authentic Japan.</p>
+          <p class="text-center visible-xs"><a href="#top">Back To Top</a></p>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Bootstrap JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap JS (for navbar toggle) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
