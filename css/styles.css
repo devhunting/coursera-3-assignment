@@ -1,195 +1,158 @@
-/* ===== GLOBAL STYLES ===== */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding-top: 70px;
-  background:
-    linear-gradient(135deg, #f8fafc, #e3e9f3);
-  color: #2c3e50;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food, LLC</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: 'Rubik', sans-serif;
+      background: linear-gradient(135deg, #e8f0f7, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
 
-/* ===== MAIN TITLE ===== */
-.main-title {
-  font-size: 3rem;
-  font-weight: 800;
-  color: #1b2a41;
-  margin-bottom: 3rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
+    .navbar-default {
+      background-color: #3c3c3c;
+      border: none;
+    }
 
-/* ===== NAVBAR ===== */
-.navbar {
-  background-color: #1b2a41;
-  border: none;
-  box-shadow: 0 4px 15px rgba(27, 42, 65, 0.3);
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
+    .navbar-brand {
+      color: white !important;
+      font-weight: 600;
+    }
 
-.navbar-brand {
-  color: #f5f7fa !important;
-  font-size: 1.6rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  padding-left: 1rem;
-}
+    .navbar-toggle {
+      border: none;
+      background-color: #fff;
+    }
 
-.navbar-toggle {
-  border: 1px solid #f5f7fa;
-}
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #3c3c3c;
+    }
 
-.navbar-toggle .icon-bar {
-  background-color: #f5f7fa;
-}
+    .navbar-nav > li > a {
+      color: white !important;
+    }
 
-.navbar-nav li a {
-  color: #f5f7fa !important;
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
+    h1 {
+      margin: 30px 0;
+      font-weight: 600;
+      color: #333;
+    }
 
-.navbar-nav li a:hover,
-.navbar-nav li a:focus {
-  background-color: #162233 !important;
-  color: #f39c12 !important;
-  outline: none;
-  text-decoration: none;
-  border-radius: 4px;
-}
+    .menu-section {
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-height: 280px;
+    }
 
-/* ===== MENU SECTIONS ===== */
-.menu-section {
-  background-color: #ffffff;
-  padding: 30px 25px;
-  margin-bottom: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 14px 36px rgba(27, 42, 65, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+    .menu-section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    }
 
-.menu-section:hover,
-.menu-section:focus-within {
-  transform: translateY(-6px);
-  box-shadow: 0 24px 48px rgba(27, 42, 65, 0.18);
-  outline: none;
-}
+    .menu-section h3 {
+      margin-top: 0;
+      font-weight: 600;
+      color: #3c3c3c;
+    }
 
-/* Colored top borders for each section */
-#chicken {
-  border-top: 6px solid #e67e22; /* orange */
-}
+    .menu-section p {
+      color: #5a5a5a;
+    }
 
-#beef {
-  border-top: 6px solid #c0392b; /* red */
-}
+    .row > div {
+      margin-bottom: 30px;
+    }
 
-#sushi {
-  border-top: 6px solid #27ae60; /* green */
-}
+    @media (min-width: 768px) {
+      .row > div {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
 
-/* Section Headings */
-.menu-section h2 {
-  color: #1b2a41;
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: 1rem;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
+    footer {
+      text-align: center;
+      padding: 15px;
+      color: #888;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-default" id="top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Food, LLC</a>
+      </div>
 
-/* Section Paragraph */
-.menu-section p {
-  font-size: 1.1rem;
-  color: #4a4a4a;
-  line-height: 1.6;
-  margin-bottom: 1.25rem;
-  flex-grow: 1;
-  text-align: center;
-}
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav visible-xs">
+          <li><a href="#chicken">Chicken</a></li>
+          <li><a href="#beef">Beef</a></li>
+          <li><a href="#sushi">Sushi</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-/* Back to Top Link for Mobile */
-.back-to-top a {
-  display: inline-block;
-  margin-top: auto;
-  text-decoration: none;
-  color: #2980b9;
-  font-weight: 700;
-  font-size: 0.9rem;
-  transition: color 0.25s ease;
-  text-align: center;
-  width: 100%;
-}
+  <!-- Heading -->
+  <div class="container">
+    <h1 class="text-center">Our Menu</h1>
+    <div class="row">
+      <!-- Chicken -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="menu-section" id="chicken">
+          <h3 class="text-center">Chicken</h3>
+          <p>Juicy grilled chicken seasoned with herbs and spices. Perfectly cooked and served hot.</p>
+          <p class="text-center visible-xs"><a href="#top">Back To Top</a></p>
+        </div>
+      </div>
 
-.back-to-top a:hover,
-.back-to-top a:focus {
-  color: #1c5980;
-  text-decoration: underline;
-  outline: none;
-  cursor: pointer;
-  font-weight: 800;
-}
+      <!-- Beef -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="menu-section" id="beef">
+          <h3 class="text-center">Beef</h3>
+          <p>Tender beef cuts slow-cooked in flavorful sauces. A savory delight for meat lovers.</p>
+          <p class="text-center visible-xs"><a href="#top">Back To Top</a></p>
+        </div>
+      </div>
 
-/* Spacing in grid */
-.row > [class*="col-"] {
-  padding-left: 15px;
-  padding-right: 15px;
-}
+      <!-- Sushi -->
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="menu-section" id="sushi">
+          <h3 class="text-center">Sushi</h3>
+          <p>Freshly rolled sushi with premium ingredients. Experience the taste of authentic Japan.</p>
+          <p class="text-center visible-xs"><a href="#top">Back To Top</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 991px) {
-  .main-title {
-    font-size: 2.5rem;
-  }
-  .menu-section {
-    min-height: auto;
-    padding: 25px 20px;
-    margin-bottom: 1.5rem;
-  }
-  .menu-section h2 {
-    font-size: 1.6rem;
-  }
-  .menu-section p {
-    font-size: 1rem;
-  }
-  .navbar-brand {
-    font-size: 1.3rem;
-  }
-}
+  <footer>
+    <p>&copy; 2025 Food, LLC. All rights reserved.</p>
+  </footer>
 
-@media (max-width: 767px) {
-  .menu-section {
-    padding: 18px 15px;
-    margin-bottom: 1.2rem;
-  }
-  .menu-section h2 {
-    font-size: 1.4rem;
-  }
-  .menu-section p {
-    font-size: 0.95rem;
-  }
-  .navbar-brand {
-    font-size: 1.1rem;
-  }
-}
-
-/* ===== BACKGROUND AESTHETIC PATTERN ===== */
-body {
-  background-image:
-    repeating-linear-gradient(
-      45deg,
-      rgba(230, 235, 245, 0.15) 0,
-      rgba(230, 235, 245, 0.15) 10px,
-      rgba(240, 245, 250, 0.15) 10px,
-      rgba(240, 245, 250, 0.15) 20px
-    );
-  background-repeat: repeat;
-}
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
