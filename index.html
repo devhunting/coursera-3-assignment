@@ -4,29 +4,29 @@
   <meta charset="UTF-8">
   <title>Food, LLC</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css">
   <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-default" id="top">
+  <nav class="navbar navbar-default navbar-fixed-top" id="top">
     <div class="container-fluid">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed visible-xs" data-toggle="collapse" data-target="#myNavbar">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="#">Food, LLC</a>
       </div>
-
-      <div class="collapse navbar-collapse visible-xs" id="myNavbar">
-        <ul class="nav navbar-nav">
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav visible-xs">
           <li><a href="#chicken">Chicken</a></li>
           <li><a href="#beef">Beef</a></li>
           <li><a href="#sushi">Sushi</a></li>
@@ -36,39 +36,34 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="container">
-    <h1 class="text-center page-title">Our Menu</h1>
-    <div class="row menu-row">
-      
+  <div class="container">
+    <h1 class="text-center">Our Menu</h1>
+    <div class="row">
       <!-- Chicken -->
-      <section class="col-xs-12 col-sm-6 col-md-4">
-        <div class="menu-card" id="chicken">
-          <h3 class="text-center">Chicken</h3>
-          <p>Juicy grilled chicken seasoned with herbs and spices. Perfectly cooked and served hot.</p>
-          <p class="text-center visible-xs"><a href="#top">Back To Top</a></p>
-        </div>
-      </section>
+      <div class="col-xs-12 col-sm-6 col-md-4 menu-box" id="chicken">
+        <h3>Chicken</h3>
+        <p>Juicy grilled chicken seasoned with herbs and spices. Perfectly cooked and served hot.</p>
+        <p class="visible-xs text-center"><a href="#top">Back To Top</a></p>
+      </div>
 
       <!-- Beef -->
-      <section class="col-xs-12 col-sm-6 col-md-4">
-        <div class="menu-card" id="beef">
-          <h3 class="text-center">Beef</h3>
-          <p>Tender beef cuts slow-cooked in flavorful sauces. A savory delight for meat lovers.</p>
-          <p class="text-center visible-xs"><a href="#top">Back To Top</a></p>
-        </div>
-      </section>
+      <div class="col-xs-12 col-sm-6 col-md-4 menu-box" id="beef">
+        <h3>Beef</h3>
+        <p>Tender beef cuts slow-cooked in flavorful sauces. A savory delight for meat lovers.</p>
+        <p class="visible-xs text-center"><a href="#top">Back To Top</a></p>
+      </div>
 
       <!-- Sushi -->
-      <section class="col-xs-12 col-sm-12 col-md-4">
-        <div class="menu-card" id="sushi">
-          <h3 class="text-center">Sushi</h3>
-          <p>Freshly rolled sushi with premium ingredients. Experience the taste of authentic Japan.</p>
-          <p class="text-center visible-xs"><a href="#top">Back To Top</a></p>
-        </div>
-      </section>
-
+      <div class="col-xs-12 col-sm-12 col-md-4 menu-box" id="sushi">
+        <h3>Sushi</h3>
+        <p>Freshly rolled sushi with premium ingredients. Experience the taste of authentic Japan.</p>
+        <p class="visible-xs text-center"><a href="#top">Back To Top</a></p>
+      </div>
     </div>
-  </main>
+  </div>
 
+  <!-- Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
